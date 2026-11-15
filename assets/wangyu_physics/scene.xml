@@ -1,0 +1,11 @@
+<mujoco model="Wangyu native physics preview">
+  <include file="wangyu.xml" />
+  <visual>
+    <global offwidth="1280" offheight="960" />
+    <headlight ambient=".4 .4 .4" diffuse=".6 .6 .6" />
+  </visual>
+  <worldbody>
+    <light pos="2 -3 4" dir="-1 1 -1" />
+    <geom name="ground" type="plane" size="5 5 .1" rgba=".23 .25 .28 1" contype="1" conaffinity="1" friction="1 .01 .001" />
+  </worldbody>
+</mujoco>

@@ -1,0 +1,71 @@
+<mujoco model="Wangyu visual preview">
+  <compiler angle="radian" />
+  <asset>
+    <material name="part_0_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_0_0" file="part_0_0.obj" />
+    <material name="part_1_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_1_0" file="part_1_0.obj" />
+    <material name="part_2_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_2_0" file="part_2_0.obj" />
+    <material name="part_3_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_3_0" file="part_3_0.obj" />
+    <material name="part_4_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_4_0" file="part_4_0.obj" />
+    <material name="part_5_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_5_0" file="part_5_0.obj" />
+    <texture name="part_6_0" type="2d" file="Helmet_BaseColor.png" vflip="true" />
+    <material name="part_6_0" rgba=".55 .32 .08 1" specular=".9" shininess=".9" texture="part_6_0" />
+    <mesh name="part_6_0" file="part_6_0.obj" />
+    <texture name="part_7_0" type="2d" file="Helmet_BaseColor.png" vflip="true" />
+    <material name="part_7_0" rgba=".55 .32 .08 1" specular=".9" shininess=".9" texture="part_7_0" />
+    <mesh name="part_7_0" file="part_7_0.obj" />
+    <texture name="part_8_0" type="2d" file="Helmet_BaseColor.png" vflip="true" />
+    <material name="part_8_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_8_0" />
+    <mesh name="part_8_0" file="part_8_0.obj" />
+    <material name="part_9_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_9_0" file="part_9_0.obj" />
+    <material name="part_10_0" rgba="0.85 0.86 0.88 1" specular=".3" shininess=".3" />
+    <mesh name="part_10_0" file="part_10_0.obj" />
+    <texture name="part_11_0" type="2d" file="Helmet_BaseColor.png" vflip="true" />
+    <material name="part_11_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_11_0" />
+    <mesh name="part_11_0" file="part_11_0.obj" />
+    <texture name="part_12_0" type="2d" file="Suit_BaseColor.png" vflip="true" />
+    <material name="part_12_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_12_0" />
+    <mesh name="part_12_0" file="part_12_0.obj" />
+    <texture name="part_13_0" type="2d" file="Suit_BaseColor.png" vflip="true" />
+    <material name="part_13_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_13_0" />
+    <mesh name="part_13_0" file="part_13_0.obj" />
+    <texture name="part_14_0" type="2d" file="Boot_BaseColor.png" vflip="true" />
+    <material name="part_14_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_14_0" />
+    <mesh name="part_14_0" file="part_14_0.obj" />
+    <texture name="part_15_0" type="2d" file="Boot_BaseColor.png" vflip="true" />
+    <material name="part_15_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_15_0" />
+    <mesh name="part_15_0" file="part_15_0.obj" />
+    <texture name="part_16_0" type="2d" file="Suit_BaseColor.png" vflip="true" />
+    <material name="part_16_0" rgba="1 1 1 1" specular=".3" shininess=".3" texture="part_16_0" />
+    <mesh name="part_16_0" file="part_16_0.obj" />
+  </asset>
+  <worldbody>
+    <light pos="2 -3 4" dir="-1 1 -1" />
+    <geom type="plane" size="5 5 .1" rgba=".18 .20 .23 1" />
+    <body name="wangyu">
+      <geom type="mesh" mesh="part_0_0" material="part_0_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_1_0" material="part_1_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_2_0" material="part_2_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_3_0" material="part_3_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_4_0" material="part_4_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_5_0" material="part_5_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_6_0" material="part_6_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_7_0" material="part_7_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_8_0" material="part_8_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_9_0" material="part_9_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_10_0" material="part_10_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_11_0" material="part_11_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_12_0" material="part_12_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_13_0" material="part_13_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_14_0" material="part_14_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_15_0" material="part_15_0" contype="0" conaffinity="0" />
+      <geom type="mesh" mesh="part_16_0" material="part_16_0" contype="0" conaffinity="0" />
+    </body>
+  </worldbody>
+</mujoco>

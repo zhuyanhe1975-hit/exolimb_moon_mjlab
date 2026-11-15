@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "seed": 20261114,
+  "resolution_m": 0.1,
+  "roughness_amplitude_m": 0.008,
+  "crater_density_m2": 0.12,
+  "crater_radius_m": [
+    0.3,
+    1.0
+  ],
+  "crater_depth_radius_ratio": 0.075,
+  "rim_depth_ratio": 0.3,
+  "mound_density_m2": 0.18,
+  "mound_radius_m": [
+    0.4,
+    0.6
+  ],
+  "mound_height_m": [
+    0.01,
+    0.035
+  ],
+  "min_rim_sigma_cells": 1.5
+}

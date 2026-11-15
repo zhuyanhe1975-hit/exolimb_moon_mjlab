@@ -1,0 +1,22 @@
+{
+  "source": "/home/yhzhu/myWorks/zbot_exoarm_moon/assets/lunar_sites/southpole_site20/dem.npy",
+  "source_sha256": "695ec5127e58ff3cef09f3b795b35806777b69ae7b1a7542d8c09ee989457925",
+  "site": "Site20 / Leibnitz beta plateau",
+  "source_resolution_m": 5.0,
+  "shape": [
+    401,
+    401
+  ],
+  "half_extent_m": 1000.0,
+  "zmin_m": -266.61376953125,
+  "height_range_m": 331.64453125,
+  "removed_centre_elevation_m": 6398.8330078125,
+  "row_direction": "+Y",
+  "column_direction": "+X",
+  "triangle_diagonal": "(row,col) to (row+1,col+1)",
+  "spawn_cells": 118182,
+  "spawn_max_slope_deg": 15.0,
+  "spawn_jitter_m": 1.0,
+  "note": "Real DEM crop, no vertical exaggeration, no synthesized sub-5m rocks. Slopes >15deg are not spawn centres but remain collidable.",
+  "asset_sha256": "00e04e4f3c680fae652cc48c8aea1cf3f9ea5fc7470026b71783b18463065408"
+}

@@ -1,0 +1,330 @@
+{
+  "source": "/home/yhzhu/myWorks/zbot_exoarm_moon/experiments/apollo_lunar/isaaclab_task/assets/apollo_hop_fixed_head.json",
+  "sha256": "6ea38eb4f1a3c02411e7a59fe3319e2d47378293a815d44b68cc9c3b17efbfbd",
+  "bodies": {
+    "Pelvis": {
+      "mass_kg": 10.354287880901536
+    },
+    "Torso": {
+      "mass_kg": 55.12867970826313
+    },
+    "Head": {
+      "mass_kg": 14.589617515658142
+    },
+    "LeftThigh": {
+      "mass_kg": 8.965718414548212
+    },
+    "LeftShin": {
+      "mass_kg": 5.079855633890981
+    },
+    "LeftFoot": {
+      "mass_kg": 3.4803814470234324
+    },
+    "LeftUpperArm": {
+      "mass_kg": 2.778499608322871
+    },
+    "LeftForearmHand": {
+      "mass_kg": 3.059252343803095
+    },
+    "RightThigh": {
+      "mass_kg": 8.965718414548212
+    },
+    "RightShin": {
+      "mass_kg": 5.079855633890981
+    },
+    "RightFoot": {
+      "mass_kg": 3.4803814470234324
+    },
+    "RightUpperArm": {
+      "mass_kg": 2.778499608322871
+    },
+    "RightForearmHand": {
+      "mass_kg": 3.059252343803095
+    }
+  },
+  "joints": [
+    {
+      "name": "Waist",
+      "parent": "Pelvis",
+      "child": "Torso",
+      "anchor_world_m": [
+        0,
+        0,
+        1.08
+      ],
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "limits_deg": [
+        [
+          -25,
+          25
+        ],
+        [
+          -35,
+          35
+        ],
+        [
+          -40,
+          40
+        ]
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Torso",
+      "child": "Head",
+      "anchor_world_m": [
+        0,
+        0,
+        1.5
+      ],
+      "axes": [],
+      "limits_deg": [],
+      "type": "fixed"
+    },
+    {
+      "name": "LeftHip",
+      "parent": "Pelvis",
+      "child": "LeftThigh",
+      "anchor_world_m": [
+        0,
+        0.11,
+        0.9
+      ],
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "limits_deg": [
+        [
+          -40,
+          40
+        ],
+        [
+          -110,
+          45
+        ],
+        [
+          -50,
+          50
+        ]
+      ]
+    },
+    {
+      "name": "LeftKnee",
+      "parent": "LeftThigh",
+      "child": "LeftShin",
+      "anchor_world_m": [
+        0,
+        0.11,
+        0.5
+      ],
+      "axes": [
+        "Y"
+      ],
+      "limits_deg": [
+        [
+          0,
+          140
+        ]
+      ]
+    },
+    {
+      "name": "LeftAnkle",
+      "parent": "LeftShin",
+      "child": "LeftFoot",
+      "anchor_world_m": [
+        0,
+        0.11,
+        0.1
+      ],
+      "axes": [
+        "X",
+        "Y"
+      ],
+      "limits_deg": [
+        [
+          -30,
+          30
+        ],
+        [
+          -45,
+          45
+        ]
+      ]
+    },
+    {
+      "name": "LeftShoulder",
+      "parent": "Torso",
+      "child": "LeftUpperArm",
+      "anchor_world_m": [
+        0,
+        0.24,
+        1.43
+      ],
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "limits_deg": [
+        [
+          -110,
+          110
+        ],
+        [
+          -140,
+          70
+        ],
+        [
+          -90,
+          90
+        ]
+      ]
+    },
+    {
+      "name": "LeftElbow",
+      "parent": "LeftUpperArm",
+      "child": "LeftForearmHand",
+      "anchor_world_m": [
+        0,
+        0.24,
+        1.15
+      ],
+      "axes": [
+        "Y"
+      ],
+      "limits_deg": [
+        [
+          -150,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "RightHip",
+      "parent": "Pelvis",
+      "child": "RightThigh",
+      "anchor_world_m": [
+        0,
+        -0.11,
+        0.9
+      ],
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "limits_deg": [
+        [
+          -40,
+          40
+        ],
+        [
+          -110,
+          45
+        ],
+        [
+          -50,
+          50
+        ]
+      ]
+    },
+    {
+      "name": "RightKnee",
+      "parent": "RightThigh",
+      "child": "RightShin",
+      "anchor_world_m": [
+        0,
+        -0.11,
+        0.5
+      ],
+      "axes": [
+        "Y"
+      ],
+      "limits_deg": [
+        [
+          0,
+          140
+        ]
+      ]
+    },
+    {
+      "name": "RightAnkle",
+      "parent": "RightShin",
+      "child": "RightFoot",
+      "anchor_world_m": [
+        0,
+        -0.11,
+        0.1
+      ],
+      "axes": [
+        "X",
+        "Y"
+      ],
+      "limits_deg": [
+        [
+          -30,
+          30
+        ],
+        [
+          -45,
+          45
+        ]
+      ]
+    },
+    {
+      "name": "RightShoulder",
+      "parent": "Torso",
+      "child": "RightUpperArm",
+      "anchor_world_m": [
+        0,
+        -0.24,
+        1.43
+      ],
+      "axes": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "limits_deg": [
+        [
+          -110,
+          110
+        ],
+        [
+          -140,
+          70
+        ],
+        [
+          -90,
+          90
+        ]
+      ]
+    },
+    {
+      "name": "RightElbow",
+      "parent": "RightUpperArm",
+      "child": "RightForearmHand",
+      "anchor_world_m": [
+        0,
+        -0.24,
+        1.15
+      ],
+      "axes": [
+        "Y"
+      ],
+      "limits_deg": [
+        [
+          -150,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Engineering reference only, not measured Wangyu properties."
+}

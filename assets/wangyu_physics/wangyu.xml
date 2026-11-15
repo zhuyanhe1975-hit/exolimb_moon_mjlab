@@ -1,0 +1,94 @@
+<mujoco model="wangyu_native_fixed_head_v1">
+  <compiler angle="radian" autolimits="true" fusestatic="false" />
+  <option timestep="0.008333333333333333" gravity="0 0 -1.625" integrator="implicitfast" iterations="100" />
+  <default>
+    <joint damping="2" armature=".05" limited="true" />
+    <geom contype="0" conaffinity="0" friction="1 .01 .001" rgba=".82 .84 .86 1" />
+  </default>
+  <worldbody>
+    <body name="Pelvis" pos="0 0 0.811614804">
+      <freejoint name="root" />
+      <geom name="pelvis" type="ellipsoid" mass="10.354287880901536" size="0.16 0.21 0.135" />
+      <body name="Torso" pos="0.0163242891 0.00294386247 0.145123839">
+        <joint name="WaistRoll" axis="1 0 0" range="-0.436332313 0.436332313" />
+        <joint name="WaistPitch" axis="0 1 0" range="-0.610865238 0.610865238" />
+        <geom name="chest" type="capsule" mass="30.128679708263128" fromto="0 0 0.12 0 0 0.334185545" size="0.17" />
+        <geom name="backpack" type="box" mass="25" pos="-0.26 0 0.263427616" size="0.135 0.235 0.335" rgba=".88 .87 .81 1" />
+        <body name="Head" pos="0.0108045638 -0.00294136078 0.454185545">
+          <geom name="helmet" type="sphere" mass="14.289617515658142" pos="0 0 0.165" size="0.18" />
+          <geom name="visor" type="ellipsoid" mass="0.3" pos="0.145 0 0.17" size="0.055 0.14 0.125" rgba=".65 .43 .12 1" />
+        </body>
+        <body name="LeftUpperArm" pos="0.0510435142 0.204753163 0.462403119">
+          <joint name="LeftShoulderRoll" axis="1 0 0" range="-1.91986218 1.91986218" />
+          <joint name="LeftShoulderPitch" axis="0 1 0" range="-2.44346095 1.22173048" />
+          <joint name="LeftShoulderYaw" axis="0 0 1" range="-1.57079633 1.57079633" />
+          <geom name="left_upper_arm" type="capsule" mass="2.778499608322871" fromto="0.00779074748 0.0239665227 -0.0378835062 0.0424585013 0.130614249 -0.206459894" size="0.07" />
+          <body name="LeftForearmHand" pos="0.0502492487 0.154580772 -0.2443434">
+            <joint name="LeftElbow" axis="0 1 0" range="-2.61799388 0" />
+            <geom name="left_forearm_hand" type="capsule" mass="3.059252343803095" fromto="0.0287150698 0.0141227123 -0.022293357 0.218318686 0.107374003 -0.169494849" size="0.06" />
+          </body>
+        </body>
+        <body name="RightUpperArm" pos="0.0510435496 -0.204751713 0.462403834">
+          <joint name="RightShoulderRoll" axis="1 0 0" range="-1.91986218 1.91986218" />
+          <joint name="RightShoulderPitch" axis="0 1 0" range="-2.44346095 1.22173048" />
+          <joint name="RightShoulderYaw" axis="0 0 1" range="-1.57079633 1.57079633" />
+          <geom name="right_upper_arm" type="capsule" mass="2.778499608322871" fromto="0.00779069038 -0.0239667067 -0.0378834016 0.0424582063 -0.130615302 -0.206459402" size="0.07" />
+          <body name="RightForearmHand" pos="0.0502488967 -0.154582009 -0.244342804">
+            <joint name="RightElbow" axis="0 1 0" range="-2.61799388 0" />
+            <geom name="right_forearm_hand" type="capsule" mass="3.059252343803095" fromto="0.0287151361 -0.0141227179 -0.022293268 0.218317302 -0.107373117 -0.169492706" size="0.06" />
+          </body>
+        </body>
+      </body>
+      <body name="LeftThigh" pos="-1.63912773e-07 0.134575925 -1.78813934e-07">
+        <joint name="LeftHipRoll" axis="1 0 0" range="-0.698131701 0.698131701" />
+        <joint name="LeftHipPitch" axis="0 1 0" range="-1.91986218 0.785398163" />
+        <joint name="LeftHipYaw" axis="0 0 1" range="-0.872664626 0.872664626" />
+        <geom name="left_thigh" type="capsule" mass="8.965718414548212" fromto="0.0132603271 0.00315313909 -0.0635548695 0.0586519792 0.0139467033 -0.281110628" size="0.1" />
+        <body name="LeftShin" pos="0.0719123064 0.0170998424 -0.344665498">
+          <joint name="LeftKnee" axis="0 1 0" range="0 2.44346095" />
+          <geom name="left_shin" type="capsule" mass="5.079855633890981" fromto="-0.0115502312 0.00236598431 -0.0506457725 -0.0725852369 0.0148685795 -0.318273749" size="0.08" />
+          <body name="LeftFoot" pos="-0.0841354681 0.0172345638 -0.368919522">
+            <joint name="LeftAnkle" axis="0 1 0" range="-0.785398163 0.785398163" />
+            <geom name="left_sole" type="box" mass="3.4803814470234324" pos="0.035 0 -0.049014803" size="0.15 0.085 0.049014803" contype="1" conaffinity="1" rgba=".43 .46 .49 1" />
+          </body>
+        </body>
+      </body>
+      <body name="RightThigh" pos="2.4586916e-07 -0.134575882 2.38418579e-07">
+        <joint name="RightHipRoll" axis="1 0 0" range="-0.698131701 0.698131701" />
+        <joint name="RightHipPitch" axis="0 1 0" range="-1.91986218 0.785398163" />
+        <joint name="RightHipYaw" axis="0 0 1" range="-0.872664626 0.872664626" />
+        <geom name="right_thigh" type="capsule" mass="8.965718414548212" fromto="0.0132603274 -0.00315328436 -0.0635548622 0.0586519887 -0.0139473478 -0.281110635" size="0.1" />
+        <body name="RightShin" pos="0.0719123161 -0.0171006322 -0.344665498">
+          <joint name="RightKnee" axis="0 1 0" range="0 2.44346095" />
+          <geom name="right_shin" type="capsule" mass="5.079855633890981" fromto="-0.0115502268 -0.00236616602 -0.0506457651 -0.0725852213 -0.014869724 -0.318273756" size="0.08" />
+          <body name="RightFoot" pos="-0.0841354481 -0.01723589 -0.368919522">
+            <joint name="RightAnkle" axis="0 1 0" range="-0.785398163 0.785398163" />
+            <geom name="right_sole" type="box" mass="3.4803814470234324" pos="0.035 0 -0.0490150116" size="0.15 0.085 0.0490150116" contype="1" conaffinity="1" rgba=".43 .46 .49 1" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="WaistRoll" joint="WaistRoll" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="WaistPitch" joint="WaistPitch" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="LeftHipRoll" joint="LeftHipRoll" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="LeftHipPitch" joint="LeftHipPitch" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="LeftHipYaw" joint="LeftHipYaw" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="LeftKnee" joint="LeftKnee" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="LeftAnkle" joint="LeftAnkle" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="LeftShoulderRoll" joint="LeftShoulderRoll" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="LeftShoulderPitch" joint="LeftShoulderPitch" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="LeftShoulderYaw" joint="LeftShoulderYaw" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="LeftElbow" joint="LeftElbow" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="RightHipRoll" joint="RightHipRoll" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="RightHipPitch" joint="RightHipPitch" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="RightHipYaw" joint="RightHipYaw" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="RightKnee" joint="RightKnee" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="RightAnkle" joint="RightAnkle" gear="1" ctrllimited="true" ctrlrange="-180 180" />
+    <motor name="RightShoulderRoll" joint="RightShoulderRoll" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="RightShoulderPitch" joint="RightShoulderPitch" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="RightShoulderYaw" joint="RightShoulderYaw" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+    <motor name="RightElbow" joint="RightElbow" gear="1" ctrllimited="true" ctrlrange="-60 60" />
+  </actuator>
+</mujoco>

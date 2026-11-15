@@ -1,0 +1,91 @@
+<mujoco model="wangyu_moon_proxy">
+  <compiler angle="radian" />
+  <option gravity="0 0 -1.625" timestep="0.008333333333" />
+  <default>
+    <joint damping="3" armature=".05" limited="true" />
+    <geom type="capsule" rgba=".85 .87 .9 1" friction="1 .01 .001" contype="0" conaffinity="0" />
+  </default>
+  <worldbody>
+    <body name="Pelvis" pos="0 0 .88">
+      <freejoint />
+      <geom type="box" size=".12 .16 .10" mass="18" />
+      <body name="Torso" pos="0 0 .1">
+        <geom fromto="0 0 0 0 0 .4" size="0.16" mass="35" />
+        <joint name="WaistPitch" axis="0 1 0" range="-.5 .5" />
+        <joint name="WaistRoll" axis="1 0 0" range="-.3 .3" />
+        <geom type="box" pos="-.20 0 .20" size=".12 .20 .32" mass="25" rgba=".9 .9 .85 1" />
+        <geom type="sphere" pos="0 0 .53" size=".14" mass="6" />
+        <body name="LeftUpperArm" pos="0 0.20800000000000002 .35">
+          <geom fromto="0 0 0 0 0 -.28" size="0.055" mass="4" />
+          <joint name="LeftShoulderPitch" axis="0 1 0" range="-1.5 1.5" />
+          <joint name="LeftShoulderRoll" axis="1 0 0" range="-1.5 1.5" />
+          <joint name="LeftShoulderYaw" axis="0 0 1" range="-1.5 1.5" />
+          <body name="LeftForeArm" pos="0 0 -.28">
+            <geom fromto="0 0 0 0 0 -.30" size="0.05" mass="3" />
+            <joint name="LeftElbow" axis="0 1 0" range="-1.8 .1" />
+          </body>
+        </body>
+        <body name="RightUpperArm" pos="0 -0.20800000000000002 .35">
+          <geom fromto="0 0 0 0 0 -.28" size="0.055" mass="4" />
+          <joint name="RightShoulderPitch" axis="0 1 0" range="-1.5 1.5" />
+          <joint name="RightShoulderRoll" axis="1 0 0" range="-1.5 1.5" />
+          <joint name="RightShoulderYaw" axis="0 0 1" range="-1.5 1.5" />
+          <body name="RightForeArm" pos="0 0 -.28">
+            <geom fromto="0 0 0 0 0 -.30" size="0.05" mass="3" />
+            <joint name="RightElbow" axis="0 1 0" range="-1.8 .1" />
+          </body>
+        </body>
+      </body>
+      <body name="LeftThigh" pos="0 0.13 0">
+        <geom fromto="0 0 0 0 0 -.36" size="0.085" mass="11" />
+        <joint name="LeftHipPitch" axis="0 1 0" range="-1.8 .4" />
+        <joint name="LeftHipRoll" axis="1 0 0" range="-.5 .5" />
+        <joint name="LeftHipYaw" axis="0 0 1" range="-.5 .5" />
+        <body name="LeftShin" pos="0 0 -.36">
+          <geom fromto="0 0 0 0 0 -.35" size="0.07" mass="7" />
+          <joint name="LeftKnee" axis="0 1 0" range="0 1.9" />
+          <body name="LeftFoot" pos="0 0 -.35">
+            <joint name="LeftAnkle" axis="0 1 0" range="-.6 .6" />
+            <geom type="box" pos=".07 0 -.08" size=".15 .075 .08" mass="3" contype="1" conaffinity="1" />
+          </body>
+        </body>
+      </body>
+      <body name="RightThigh" pos="0 -0.13 0">
+        <geom fromto="0 0 0 0 0 -.36" size="0.085" mass="11" />
+        <joint name="RightHipPitch" axis="0 1 0" range="-1.8 .4" />
+        <joint name="RightHipRoll" axis="1 0 0" range="-.5 .5" />
+        <joint name="RightHipYaw" axis="0 0 1" range="-.5 .5" />
+        <body name="RightShin" pos="0 0 -.36">
+          <geom fromto="0 0 0 0 0 -.35" size="0.07" mass="7" />
+          <joint name="RightKnee" axis="0 1 0" range="0 1.9" />
+          <body name="RightFoot" pos="0 0 -.35">
+            <joint name="RightAnkle" axis="0 1 0" range="-.6 .6" />
+            <geom type="box" pos=".07 0 -.08" size=".15 .075 .08" mass="3" contype="1" conaffinity="1" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="WaistPitch" joint="WaistPitch" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="WaistRoll" joint="WaistRoll" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftHipPitch" joint="LeftHipPitch" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftHipRoll" joint="LeftHipRoll" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftHipYaw" joint="LeftHipYaw" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftKnee" joint="LeftKnee" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftAnkle" joint="LeftAnkle" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftShoulderPitch" joint="LeftShoulderPitch" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftShoulderRoll" joint="LeftShoulderRoll" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftShoulderYaw" joint="LeftShoulderYaw" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="LeftElbow" joint="LeftElbow" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightHipPitch" joint="RightHipPitch" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightHipRoll" joint="RightHipRoll" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightHipYaw" joint="RightHipYaw" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightKnee" joint="RightKnee" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightAnkle" joint="RightAnkle" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightShoulderPitch" joint="RightShoulderPitch" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightShoulderRoll" joint="RightShoulderRoll" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightShoulderYaw" joint="RightShoulderYaw" ctrllimited="true" ctrlrange="-150 150" />
+    <motor name="RightElbow" joint="RightElbow" ctrllimited="true" ctrlrange="-150 150" />
+  </actuator>
+</mujoco>

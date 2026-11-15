@@ -1,0 +1,4 @@
+<mujoco model="Wangyu skinned robot">
+  <include file="wangyu_physics/wangyu.xml" />
+  <include file="wangyu_skin/skin.xml" />
+</mujoco>

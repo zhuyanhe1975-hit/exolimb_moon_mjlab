@@ -1,0 +1,695 @@
+{
+  "version": 1,
+  "coordinate_convention": "+X forward,+Y left,+Z up; right-hand hinge angles",
+  "joint_parameterization": "MuJoCo ordered local X/Y/Z hinges, not USD rotation-vector coordinates. Apollo motions require explicit retargeting.",
+  "source_fbx_sha256": "c2eec3a2a116cbacca4933212302cc84e873e8eaa8f6fe3c8cd936f57b0731cb",
+  "apollo_reference": "/home/yhzhu/myWorks/exolimb_moon_mjlab/assets/wangyu_physics/apollo_reference.json",
+  "apollo_reference_sha256": "a1805339d5bafdc72aca6d8ace292884309b9203f41b25bb1db203bfb5e5e3b9",
+  "assumptions": [
+    "All joint origins and limb directions preserve the FBX initial posed rig; pelvis centered in XY; source metric scale preserved. Joint q=0 denotes this pose, with hinge ranges relative to it.",
+    "126.8 kg total and per-body masses transferred from Apollo engineering envelope estimate, NOT measured Wangyu mass.",
+    "Backpack assumed 25 kg included in Torso; primitive inertia recomputed by MuJoCo, NOT copied Apollo inertia.",
+    "Primitive radii, torso/helmet/backpack/foot sizes and 60/180 Nm limits are engineering approximations.",
+    "Fixed head; hands merged with forearms; only soles collide with ground; no self collision; no exoskeleton."
+  ],
+  "segment_lengths_m": {
+    "thigh": 0.35250262952360756,
+    "shin": 0.3787841624910749,
+    "upper_arm": 0.29346878373697843
+  },
+  "initial_pelvis_height_m": 0.8116148039698601,
+  "initial_pose": "source_fbx_pose",
+  "source_to_physics_translation_m": [
+    0.075401172041893,
+    -8.60539106639635e-09,
+    0.0
+  ],
+  "body_count": 13,
+  "actuated_dof_count": 20,
+  "total_mass_kg": 126.79999999999998,
+  "bodies": {
+    "Pelvis": {
+      "neutral_origin_world_m": [
+        0.0,
+        0.0,
+        0.8116148039698601
+      ],
+      "mass_kg": 10.354287880901536,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "principal_inertia_kg_m2": [
+        0.12906619843543762,
+        0.09075533327610197,
+        0.14433877305976742
+      ],
+      "inertial_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Torso": {
+      "neutral_origin_world_m": [
+        0.01632428914308548,
+        0.00294386247175904,
+        0.956738643348217
+      ],
+      "mass_kg": 55.12867970826313,
+      "com_local_m": [
+        -0.11790596173167064,
+        0.0,
+        0.24357005968168166
+      ],
+      "principal_inertia_kg_m2": [
+        2.7587040112532115,
+        2.2035200711107548,
+        1.8661915250786054
+      ],
+      "inertial_quat_wxyz": [
+        0.6903914174142101,
+        -0.15283877374802052,
+        -0.15283877374802052,
+        0.6903914174142101
+      ]
+    },
+    "Head": {
+      "neutral_origin_world_m": [
+        0.027128852903842926,
+        2.5016895710550102e-06,
+        1.4109241887927055
+      ],
+      "mass_kg": 14.589617515658142,
+      "com_local_m": [
+        0.002981572337541688,
+        0.0,
+        0.1651028128392256
+      ],
+      "principal_inertia_kg_m2": [
+        0.19273711308243893,
+        0.19249759038698763,
+        0.18730592030747817
+      ],
+      "inertial_quat_wxyz": [
+        0.0,
+        0.6930897320419616,
+        0.0,
+        0.7208513184686605
+      ]
+    },
+    "LeftThigh": {
+      "neutral_origin_world_m": [
+        -1.6391277313232422e-07,
+        0.13457592461261125,
+        0.8116146251559258
+      ],
+      "mass_kg": 8.965718414548212,
+      "com_local_m": [
+        0.03595615315,
+        0.008549921195,
+        -0.17233274875
+      ],
+      "principal_inertia_kg_m2": [
+        0.12019376533981052,
+        0.12019376533981052,
+        0.04146909692747082
+      ],
+      "inertial_quat_wxyz": [
+        0.994426272588343,
+        0.024390864052559823,
+        -0.10257423719835279,
+        0.0
+      ]
+    },
+    "LeftShin": {
+      "neutral_origin_world_m": [
+        0.07191214244812727,
+        0.15167576704177232,
+        0.46694912761449814
+      ],
+      "mass_kg": 5.079855633890981,
+      "com_local_m": [
+        -0.04206773405,
+        0.008617281905,
+        -0.18445976075
+      ],
+      "principal_inertia_kg_m2": [
+        0.07104095342923306,
+        0.07104095342923306,
+        0.015346417349854962
+      ],
+      "inertial_quat_wxyz": [
+        0.9934679572813397,
+        0.022899429143579994,
+        0.11179013373343902,
+        -0.0
+      ]
+    },
+    "LeftFoot": {
+      "neutral_origin_world_m": [
+        -0.012223325669765472,
+        0.16891033086928697,
+        0.09802960604429245
+      ],
+      "mass_kg": 3.4803814470234324,
+      "com_local_m": [
+        0.035,
+        0.0,
+        -0.049014803
+      ],
+      "principal_inertia_kg_m2": [
+        0.011169067180060771,
+        0.028890009381155077,
+        0.03448477950425718
+      ],
+      "inertial_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "LeftUpperArm": {
+      "neutral_origin_world_m": [
+        0.0673678033053875,
+        0.20769702527675005,
+        1.419141761958599
+      ],
+      "mass_kg": 2.778499608322871,
+      "com_local_m": [
+        0.02512462439,
+        0.07729038584999999,
+        -0.1221717001
+      ],
+      "principal_inertia_kg_m2": [
+        0.02418896213172183,
+        0.02418896213172183,
+        0.006377746083464242
+      ],
+      "inertial_quat_wxyz": [
+        0.9572367872080143,
+        0.2751339937893443,
+        -0.08943723317055279,
+        0.0
+      ]
+    },
+    "LeftForearmHand": {
+      "neutral_origin_world_m": [
+        0.11761705204844475,
+        0.36227779719981523,
+        1.1747983619570732
+      ],
+      "mass_kg": 3.059252343803095,
+      "com_local_m": [
+        0.1235168779,
+        0.06074835765,
+        -0.09589410300000001
+      ],
+      "principal_inertia_kg_m2": [
+        0.03226644404247356,
+        0.03226644404247356,
+        0.005245609077972415
+      ],
+      "inertial_quat_wxyz": [
+        0.8864605290652359,
+        0.2042509595778139,
+        -0.4152942040540952,
+        0.0
+      ]
+    },
+    "RightThigh": {
+      "neutral_origin_world_m": [
+        2.4586915969848633e-07,
+        -0.1345758822187486,
+        0.8116150423884392
+      ],
+      "mass_kg": 8.965718414548212,
+      "com_local_m": [
+        0.03595615805,
+        -0.00855031608,
+        -0.1723327486
+      ],
+      "principal_inertia_kg_m2": [
+        0.12019378685280709,
+        0.12019378685280709,
+        0.04146909730584351
+      ],
+      "inertial_quat_wxyz": [
+        0.9944262444701386,
+        -0.02439198848874931,
+        -0.10257424241290242,
+        0.0
+      ]
+    },
+    "RightShin": {
+      "neutral_origin_world_m": [
+        0.07191256200894713,
+        -0.15167651440945296,
+        0.46694954484701157
+      ],
+      "mass_kg": 5.079855633890981,
+      "com_local_m": [
+        -0.042067724050000005,
+        -0.008617945010000001,
+        -0.18445976055000002
+      ],
+      "principal_inertia_kg_m2": [
+        0.07104097137406554,
+        0.07104097137406554,
+        0.015346417481761361
+      ],
+      "inertial_quat_wxyz": [
+        0.9934679211038926,
+        -0.022901188786094727,
+        0.11179009477450783,
+        0.0
+      ]
+    },
+    "RightFoot": {
+      "neutral_origin_world_m": [
+        -0.012222886085510254,
+        -0.16891240444031386,
+        0.09803002327680588
+      ],
+      "mass_kg": 3.4803814470234324,
+      "com_local_m": [
+        0.035,
+        0.0,
+        -0.0490150116
+      ],
+      "principal_inertia_kg_m2": [
+        0.011169090903523263,
+        0.02889003310461757,
+        0.03448477950425718
+      ],
+      "inertial_quat_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "RightUpperArm": {
+      "neutral_origin_world_m": [
+        0.06736783869564533,
+        -0.2018078502639833,
+        1.4191424772143364
+      ],
+      "mass_kg": 2.778499608322871,
+      "com_local_m": [
+        0.02512444834,
+        -0.07729100435,
+        -0.1221714018
+      ],
+      "principal_inertia_kg_m2": [
+        0.024188975143395464,
+        0.024188975143395464,
+        0.0063777462206306475
+      ],
+      "inertial_quat_wxyz": [
+        0.9572361860533983,
+        -0.2751362801078591,
+        -0.08943663387199613,
+        0.0
+      ]
+    },
+    "RightForearmHand": {
+      "neutral_origin_world_m": [
+        0.11761673539876938,
+        -0.35638985898342757,
+        1.1747996732592583
+      ],
+      "mass_kg": 3.059252343803095,
+      "com_local_m": [
+        0.12351621905,
+        -0.06074791745,
+        -0.095892987
+      ],
+      "principal_inertia_kg_m2": [
+        0.03226600159917446,
+        0.03226600159917446,
+        0.005245607094241295
+      ],
+      "inertial_quat_wxyz": [
+        0.886459885223872,
+        -0.20425118934847283,
+        -0.41529546534800255,
+        0.0
+      ]
+    }
+  },
+  "joints": [
+    {
+      "name": "WaistRoll",
+      "parent": "Pelvis",
+      "child": "Torso",
+      "axis": "X",
+      "range_deg": [
+        -25,
+        25
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "WaistPitch",
+      "parent": "Pelvis",
+      "child": "Torso",
+      "axis": "Y",
+      "range_deg": [
+        -35,
+        35
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "LeftHipRoll",
+      "parent": "Pelvis",
+      "child": "LeftThigh",
+      "axis": "X",
+      "range_deg": [
+        -40,
+        40
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "LeftHipPitch",
+      "parent": "Pelvis",
+      "child": "LeftThigh",
+      "axis": "Y",
+      "range_deg": [
+        -110,
+        45
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "LeftHipYaw",
+      "parent": "Pelvis",
+      "child": "LeftThigh",
+      "axis": "Z",
+      "range_deg": [
+        -50,
+        50
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "LeftKnee",
+      "parent": "LeftThigh",
+      "child": "LeftShin",
+      "axis": "Y",
+      "range_deg": [
+        0,
+        140
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "LeftAnkle",
+      "parent": "LeftShin",
+      "child": "LeftFoot",
+      "axis": "Y",
+      "range_deg": [
+        -45,
+        45
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "LeftShoulderRoll",
+      "parent": "Torso",
+      "child": "LeftUpperArm",
+      "axis": "X",
+      "range_deg": [
+        -110,
+        110
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "LeftShoulderPitch",
+      "parent": "Torso",
+      "child": "LeftUpperArm",
+      "axis": "Y",
+      "range_deg": [
+        -140,
+        70
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "LeftShoulderYaw",
+      "parent": "Torso",
+      "child": "LeftUpperArm",
+      "axis": "Z",
+      "range_deg": [
+        -90,
+        90
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "LeftElbow",
+      "parent": "LeftUpperArm",
+      "child": "LeftForearmHand",
+      "axis": "Y",
+      "range_deg": [
+        -150,
+        0
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "RightHipRoll",
+      "parent": "Pelvis",
+      "child": "RightThigh",
+      "axis": "X",
+      "range_deg": [
+        -40,
+        40
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "RightHipPitch",
+      "parent": "Pelvis",
+      "child": "RightThigh",
+      "axis": "Y",
+      "range_deg": [
+        -110,
+        45
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "RightHipYaw",
+      "parent": "Pelvis",
+      "child": "RightThigh",
+      "axis": "Z",
+      "range_deg": [
+        -50,
+        50
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "RightKnee",
+      "parent": "RightThigh",
+      "child": "RightShin",
+      "axis": "Y",
+      "range_deg": [
+        0,
+        140
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "RightAnkle",
+      "parent": "RightShin",
+      "child": "RightFoot",
+      "axis": "Y",
+      "range_deg": [
+        -45,
+        45
+      ],
+      "effort_limit_nm": 180
+    },
+    {
+      "name": "RightShoulderRoll",
+      "parent": "Torso",
+      "child": "RightUpperArm",
+      "axis": "X",
+      "range_deg": [
+        -110,
+        110
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "RightShoulderPitch",
+      "parent": "Torso",
+      "child": "RightUpperArm",
+      "axis": "Y",
+      "range_deg": [
+        -140,
+        70
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "RightShoulderYaw",
+      "parent": "Torso",
+      "child": "RightUpperArm",
+      "axis": "Z",
+      "range_deg": [
+        -90,
+        90
+      ],
+      "effort_limit_nm": 60
+    },
+    {
+      "name": "RightElbow",
+      "parent": "RightUpperArm",
+      "child": "RightForearmHand",
+      "axis": "Y",
+      "range_deg": [
+        -150,
+        0
+      ],
+      "effort_limit_nm": 60
+    }
+  ],
+  "geometries": [
+    {
+      "name": "pelvis",
+      "body": "Pelvis",
+      "type": "ellipsoid",
+      "mass_kg": 10.354287880901536,
+      "size": "0.16 0.21 0.135"
+    },
+    {
+      "name": "chest",
+      "body": "Torso",
+      "type": "capsule",
+      "mass_kg": 30.128679708263128,
+      "fromto": "0 0 0.12 0 0 0.334185545",
+      "size": "0.17"
+    },
+    {
+      "name": "backpack",
+      "body": "Torso",
+      "type": "box",
+      "mass_kg": 25,
+      "pos": "-0.26 0 0.263427616",
+      "size": "0.135 0.235 0.335",
+      "rgba": ".88 .87 .81 1"
+    },
+    {
+      "name": "helmet",
+      "body": "Head",
+      "type": "sphere",
+      "mass_kg": 14.289617515658142,
+      "pos": "0 0 0.165",
+      "size": "0.18"
+    },
+    {
+      "name": "visor",
+      "body": "Head",
+      "type": "ellipsoid",
+      "mass_kg": 0.3,
+      "pos": "0.145 0 0.17",
+      "size": "0.055 0.14 0.125",
+      "rgba": ".65 .43 .12 1"
+    },
+    {
+      "name": "left_thigh",
+      "body": "LeftThigh",
+      "type": "capsule",
+      "mass_kg": 8.965718414548212,
+      "fromto": "0.0132603271 0.00315313909 -0.0635548695 0.0586519792 0.0139467033 -0.281110628",
+      "size": "0.1"
+    },
+    {
+      "name": "left_shin",
+      "body": "LeftShin",
+      "type": "capsule",
+      "mass_kg": 5.079855633890981,
+      "fromto": "-0.0115502312 0.00236598431 -0.0506457725 -0.0725852369 0.0148685795 -0.318273749",
+      "size": "0.08"
+    },
+    {
+      "name": "left_sole",
+      "body": "LeftFoot",
+      "type": "box",
+      "mass_kg": 3.4803814470234324,
+      "pos": "0.035 0 -0.049014803",
+      "size": "0.15 0.085 0.049014803",
+      "contype": "1",
+      "conaffinity": "1",
+      "rgba": ".43 .46 .49 1"
+    },
+    {
+      "name": "left_upper_arm",
+      "body": "LeftUpperArm",
+      "type": "capsule",
+      "mass_kg": 2.778499608322871,
+      "fromto": "0.00779074748 0.0239665227 -0.0378835062 0.0424585013 0.130614249 -0.206459894",
+      "size": "0.07"
+    },
+    {
+      "name": "left_forearm_hand",
+      "body": "LeftForearmHand",
+      "type": "capsule",
+      "mass_kg": 3.059252343803095,
+      "fromto": "0.0287150698 0.0141227123 -0.022293357 0.218318686 0.107374003 -0.169494849",
+      "size": "0.06"
+    },
+    {
+      "name": "right_thigh",
+      "body": "RightThigh",
+      "type": "capsule",
+      "mass_kg": 8.965718414548212,
+      "fromto": "0.0132603274 -0.00315328436 -0.0635548622 0.0586519887 -0.0139473478 -0.281110635",
+      "size": "0.1"
+    },
+    {
+      "name": "right_shin",
+      "body": "RightShin",
+      "type": "capsule",
+      "mass_kg": 5.079855633890981,
+      "fromto": "-0.0115502268 -0.00236616602 -0.0506457651 -0.0725852213 -0.014869724 -0.318273756",
+      "size": "0.08"
+    },
+    {
+      "name": "right_sole",
+      "body": "RightFoot",
+      "type": "box",
+      "mass_kg": 3.4803814470234324,
+      "pos": "0.035 0 -0.0490150116",
+      "size": "0.15 0.085 0.0490150116",
+      "contype": "1",
+      "conaffinity": "1",
+      "rgba": ".43 .46 .49 1"
+    },
+    {
+      "name": "right_upper_arm",
+      "body": "RightUpperArm",
+      "type": "capsule",
+      "mass_kg": 2.778499608322871,
+      "fromto": "0.00779069038 -0.0239667067 -0.0378834016 0.0424582063 -0.130615302 -0.206459402",
+      "size": "0.07"
+    },
+    {
+      "name": "right_forearm_hand",
+      "body": "RightForearmHand",
+      "type": "capsule",
+      "mass_kg": 3.059252343803095,
+      "fromto": "0.0287151361 -0.0141227179 -0.022293268 0.218317302 -0.107373117 -0.169492706",
+      "size": "0.06"
+    }
+  ]
+}
